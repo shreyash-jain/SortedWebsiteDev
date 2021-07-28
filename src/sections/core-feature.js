@@ -41,7 +41,7 @@ export default function CoreFeature() {
 
         <Box sx={styles.contentBox}>
           <Box sx={styles.headingTop}>
-            <TextFeature subTitle={data.subTitle} title={data.title} image={ExpertLogo} />
+            <TextFeature subTitle={data.subTitle} title={data.title} />
           </Box>
 
 
