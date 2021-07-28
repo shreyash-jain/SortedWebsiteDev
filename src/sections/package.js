@@ -11,7 +11,7 @@ const packages = [
     description: 'For Individual Fitness Trainers, Yoga Instructors, Nutritionists and Therapists having upto 30 clients',
     buttonText: 'Signup Now',
     header: 'Always Free',
-    priceWithUnit: '₹0/',
+    priceWithUnit: '₹0/mo',
     points: [
       {
         icon: <IoIosCheckmarkCircle />,
@@ -64,7 +64,8 @@ const packages = [
   {
     name: 'Professional Plan',
     header: 'Recommended',
-    priceWithUnit: ' ₹499/',
+    priceWithUnit: '3 months free\n',
+    priceExtra: 'then ₹499/mo',
     description: 'Have more than 30 clients ?',
     buttonText: 'Signup Now',
     points: [
@@ -114,14 +115,14 @@ const packages = [
         text: 'Multiple professionals per institution',
         isAvailable: false,
       },
-      
+
     ],
   },
   {
 
     name: 'Institution Plan',
     description: 'For Yoga Centers, Gyms and Studios',
-    priceWithUnit: '₹1499/',
+    priceWithUnit: '₹1499/mo',
     header: 'Coming soon',
     buttonText: 'Signup Now',
     points: [

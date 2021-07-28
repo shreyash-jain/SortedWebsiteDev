@@ -5,6 +5,7 @@ import Image from 'components/image';
 
 import CoreFeatureThumb from 'assets/coreFeature.png';
 import Briefcase from 'assets/core-feature/briefcase.svg';
+import ExpertLogo from 'assets/expert_logo.png';
 import Secure from 'assets/core-feature/secure.svg';
 
 const data = {
@@ -36,10 +37,14 @@ export default function CoreFeature() {
         <Box sx={styles.thumbnail}>
           <Image src={CoreFeatureThumb} alt="Thumbnail" />
         </Box>
+
+
         <Box sx={styles.contentBox}>
           <Box sx={styles.headingTop}>
-            <TextFeature subTitle={data.subTitle} title={data.title} />
+            <TextFeature subTitle={data.subTitle} title={data.title} image={ExpertLogo} />
           </Box>
+
+
 
           <Grid gap="15px 0" columns={1} sx={styles.grid}>
             {data.features.map((item) => (

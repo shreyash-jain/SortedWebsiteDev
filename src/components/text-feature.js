@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { jsx, Box, Heading, Text, Button, Link } from 'theme-ui';
-
+import Logo from 'components/logo';
 export default function TextFeature({
   subTitle,
   title,
+  image,
   description,
   btnName,
   btnURL = '#',
@@ -14,6 +15,12 @@ export default function TextFeature({
         <Text as="p" sx={styles.wrapper.subTitle}>
           {subTitle}
         </Text>
+        {image && (
+          <Logo src={image} />
+
+
+        )}
+
         <Heading as="h2" sx={styles.wrapper.title}>
           {title}
         </Heading>

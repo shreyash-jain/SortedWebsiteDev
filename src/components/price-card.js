@@ -7,6 +7,7 @@ export default function PriceCard({
     header,
     name,
     description,
+    priceExtra,
     priceWithUnit,
     buttonText = 'Start Free Trial',
     points,
@@ -35,11 +36,21 @@ export default function PriceCard({
           </Box>
           {header && (
             <Text className="package__price" sx={styles.price}>
-
               <div className="price">
                 {priceWithUnit}
-                <sub>mo</sub>
+
               </div>
+              {priceExtra && (
+                <Text className="package__price_extra" sx={styles.priceExtra}>
+
+                  <div className="price_extra">
+                    {priceExtra}
+
+                  </div>
+                </Text>
+              )}
+
+
             </Text>
           )}
         </Flex>
@@ -145,11 +156,40 @@ const styles = {
     display: 'flex',
     letterSpacing: '-0.5px',
     color: '#0F2137',
-    marginBottom: 0,
+    marginBottom: 2,
     flexWrap: 'wrap',
     flexDirection: 'column',
     textAlign: 'right',
     mt: ['-3px', null, '2px'],
+    '> span': {
+      fontWeight: 'body',
+      fontSize: [1, 2],
+      lineHeight: 1.25,
+      display: 'block',
+      marginBottom: '10px',
+      color: 'white',
+    },
+    '> .price': {
+      marginBottom: 2,
+      color: 'secondary',
+      '> sub': {
+        position: 'relative',
+        bottom: '6px',
+      },
+    },
+  },
+  priceExtra: {
+    fontWeight: 'bold',
+    fontSize: [3, null, 3, null, '16px'],
+    lineHeight: 1,
+    display: 'flex',
+    letterSpacing: '-0.5px',
+    color: '#0F2137',
+    marginBottom: 0,
+    flexWrap: 'wrap',
+    flexDirection: 'column',
+    textAlign: 'right',
+    mt: ['3px', '3px', '2px'],
     '> span': {
       fontWeight: 'body',
       fontSize: [1, 2],

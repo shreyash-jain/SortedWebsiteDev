@@ -17,7 +17,7 @@ import Package from 'sections/package';
 import Faq from 'sections/faq';
 
 export default function IndexPage() {
-  /* <PartnerSection /> */
+  /*  */
   /*   <TestimonialCard /> */
   /*    <SecurePayment />  */
   return (
@@ -27,9 +27,11 @@ export default function IndexPage() {
           <SEO title="sort it" />
           <Banner />
           <KeyFeature />
+          <PartnerSection />
           <CoreFeature />
           <CoreFeature2 />
           <Feature />
+
 
 
           <WorkFlow />

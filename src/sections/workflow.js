@@ -30,7 +30,7 @@ const data = [
     id: 4,
     title: 'All Done, your business is now online',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Use the tools to grow your business and just concentrate on what you do best',
   },
 ];
 
