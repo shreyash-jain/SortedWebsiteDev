@@ -4,15 +4,17 @@ export default [
     label: 'Home',
   },
   {
-    path: '/careers',
-    label: 'About Us',
+    path: 'pricing',
+    label: 'Pricing',
   },
   {
     path: 'careers',
     label: 'Careers',
   },
   {
-    path: 'pricing',
-    label: 'Pricing',
+    path: 'contact',
+    label: 'Contact Us',
   },
+  
+  
 ];

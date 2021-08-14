@@ -1,0 +1,24 @@
+import { ThemeProvider, Box } from 'theme-ui';
+import { StickyProvider } from 'contexts/app/app.provider';
+import theme from 'theme';
+import Layout from 'components/layout';
+import ContactPage from 'sections/contactPage';
+
+
+const Careers = () => {
+    return (
+            <ThemeProvider theme={theme}>
+      <StickyProvider>
+                <Layout>
+                    <ContactPage />
+
+                </Layout>
+    
+            </StickyProvider>
+    
+        </ThemeProvider>
+        
+    )
+}
+
+export default Careers;

@@ -11,26 +11,24 @@ import {
   Button,
 } from 'theme-ui';
 import Input from 'components/input';
-import banner from 'assets/banner.png';
+import banner from 'assets/bannerContact.png';
 import { rgba } from 'polished';
 import { useCallback } from 'react';
 
-const CareerPage = () => {
-
-    const handleSubmit = useCallback( (e) => {
-        
-        console.log(e);
-    }
-    )
+const ContactPage = () => {
 
   return (
-    <Box as="section" id="careers" sx={styles.section}>
+    <Box as="section" id="contact" sx={styles.section}>
       <Container>
         <Box sx={styles.contentWrapper}>
           <Box sx={styles.content}>
             <Heading as="h1">
-              Come join us in building a sorted healthy community
-            </Heading>    
+              Email us at:
+                      </Heading>
+                      
+                      <Box as='p'>
+                          sortit.fit@gmail.com
+                      </Box>
                         
           </Box>
           <Box as="figure" sx={styles.illustration}>
@@ -38,31 +36,14 @@ const CareerPage = () => {
           </Box>
         </Box>
         
-        <Box sx={styles.subscribe} as={"form"} onSubmit={handleSubmit}>
-                  <Label htmlFor="name">Name</Label>
-  
-                  <Input name="name" id="name" mb={3} placeholder={"Enter your name"} required={true} />
-                  
-                  <Label htmlFor="phone">Phone</Label>
-  
-                  <Input name="phone" id="phone" mb={3} placeholder={"Enter your phone"} required={true} />
-  
-                  <Label htmlFor="email">Email</Label>
-  
-                  <Input type="email" name="email" id="email"  placeholder={"Enter your email"} mb={3} required={true} />
-
-                  <Label htmlFor="resume" name="resume">Resume</Label>
-                  <Input type="file" name="resume" mb={3} style={{ padding: '14px 24px' }} required={true}/>
-              
-                  <Button className="donate__btn" sx={styles.subscribe.button} variant="darkButton">Submit</Button>
-        </Box>
+        
               
       </Container>
     </Box>
   );
 };
 
-export default CareerPage;
+export default ContactPage;
 
 const styles = {
   contentWrapper: {

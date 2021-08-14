@@ -13,7 +13,7 @@ import { useRouter } from 'next/router';
 export default function Header({ className }) {
 
   const router = useRouter();
-
+  console.log(router);
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className} id="header">
@@ -36,9 +36,13 @@ export default function Header({ className }) {
                   
                   if (label == 'Home')
                     router.push('/')
+                  
+                  if (label == 'Contact Us')
+                    router.push('/contact')
                 }}
               >
-                {label}
+                
+                {label == 'Pricing' ?  (router.pathname == '/' ? label : null) : label}
               </Link>
             ))}
           </Flex>

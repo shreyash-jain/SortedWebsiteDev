@@ -1,6 +1,7 @@
 import { Box, Card, Text, Flex, Heading, Button } from 'theme-ui';
 import React from 'react';
 import List from './list';
+import { useRouter } from 'next/router';
 
 export default function PriceCard({
   data: {
@@ -13,6 +14,9 @@ export default function PriceCard({
     points,
   },
 }) {
+
+  const router = useRouter();
+
   return (
     <Card className={header ? 'active' : null} sx={styles.pricingBox}>
       {header && <Text sx={styles.header}>{header}</Text>}
@@ -64,6 +68,13 @@ export default function PriceCard({
           <Button
             variant={'darkButton'}
             aria-label={buttonText}
+            onClick={() => {
+              router.push({
+                pathname: '/enquiry',
+                query: {package: name}
+              })
+                
+            }}
           >
             {buttonText}
           </Button>

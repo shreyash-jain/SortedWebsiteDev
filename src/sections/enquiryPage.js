@@ -14,23 +14,52 @@ import Input from 'components/input';
 import banner from 'assets/banner.png';
 import { rgba } from 'polished';
 import { useCallback } from 'react';
+import { useRouter } from 'next/router';
 
-const CareerPage = () => {
+const EnquiryPage = () => {
 
-    const handleSubmit = useCallback( (e) => {
-        
-        console.log(e);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    let f = e.target;
+    console.log(e);
+    var raw = JSON.stringify({
+      "name": f.name.value,
+      "phoneNo": f.phone.value,
+      "email": f.email.value,
+      "packageName": query.package,
+    });
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+    e.target.reset();
+
+    fetch("https://us-central1-sorted-98c02.cloudfunctions.net/webapis/joinInstitueWaitlist", requestOptions)
+      .then(response => response.text())
+      .then(result => {
+        console.log(result);
+      })
+      .catch(error => console.log('error', error));
     }
-    )
+  
+  
+  const { query } = useRouter();
+  console.log(query);
 
   return (
-    <Box as="section" id="careers" sx={styles.section}>
+    <Box as="section" sx={styles.section}>
       <Container>
         <Box sx={styles.contentWrapper}>
           <Box sx={styles.content}>
             <Heading as="h1">
-              Come join us in building a sorted healthy community
-            </Heading>    
+              Let us know how can we update you about the package details!!
+            </Heading>        
                         
           </Box>
           <Box as="figure" sx={styles.illustration}>
@@ -50,10 +79,7 @@ const CareerPage = () => {
                   <Label htmlFor="email">Email</Label>
   
                   <Input type="email" name="email" id="email"  placeholder={"Enter your email"} mb={3} required={true} />
-
-                  <Label htmlFor="resume" name="resume">Resume</Label>
-                  <Input type="file" name="resume" mb={3} style={{ padding: '14px 24px' }} required={true}/>
-              
+        
                   <Button className="donate__btn" sx={styles.subscribe.button} variant="darkButton">Submit</Button>
         </Box>
               
@@ -62,7 +88,7 @@ const CareerPage = () => {
   );
 };
 
-export default CareerPage;
+export default EnquiryPage;
 
 const styles = {
   contentWrapper: {
@@ -79,6 +105,7 @@ const styles = {
     maxWidth: [null, null, null, '75%', '100%'],
     margin: [null, null, null, '0 auto', 0],
     textAlign: [null, null, null, 'center', 'left'],
+    color: 'black',
     h1: {
       
       fontWeight: 600,
