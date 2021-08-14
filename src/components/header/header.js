@@ -8,8 +8,12 @@ import LogoWhite from 'assets/black-text-logo.png';
 import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
+import { useRouter } from 'next/router';
 
 export default function Header({ className }) {
+
+  const router = useRouter();
+
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className} id="header">
@@ -26,6 +30,13 @@ export default function Header({ className }) {
                 offset={-70}
                 duration={500}
                 key={i}
+                onClick={() => {
+                  if (label == 'Careers')
+                    router.push(path)
+                  
+                  if (label == 'Home')
+                    router.push('/')
+                }}
               >
                 {label}
               </Link>

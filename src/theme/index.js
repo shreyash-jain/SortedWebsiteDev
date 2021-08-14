@@ -331,7 +331,11 @@ export default {
         outline: 'none',
       },
     },
+    slider: {
+      bg: 'muted',
+    },
   },
+
 
   badges: {
     primary: {

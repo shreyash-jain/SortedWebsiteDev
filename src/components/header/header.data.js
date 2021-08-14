@@ -4,11 +4,11 @@ export default [
     label: 'Home',
   },
   {
-    path: 'feature',
+    path: '/careers',
     label: 'About Us',
   },
   {
-    path: 'testimonial',
+    path: 'careers',
     label: 'Careers',
   },
   {
