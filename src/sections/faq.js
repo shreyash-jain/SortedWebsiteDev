@@ -15,7 +15,7 @@ const faqs = [
     title: 'Is App only on Play Store ?',
     contents: (
       <div>
-        Yes currently App is only available at Play Stotr, but soon it is coming for IOS users
+        Yes currently App is only available at Play Store, but soon it is coming for IOS users
       </div>
     ),
   },

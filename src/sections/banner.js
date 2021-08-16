@@ -58,7 +58,7 @@ export default function Banner() {
               <ModalVideo
                 channel="youtube"
                 isOpen={videoOpen}
-                videoId="ZNA9rmDsYVE"
+                videoId="8gtRJaxm_bI"
                 onClose={() => setVideoOpen(false)}
               />
               <Button
@@ -115,7 +115,7 @@ const styles = {
     imageBox: {
       display: ['none', null, null, 'block'],
       justifyContent: 'initial',
-      ml: [0, null, null, '-40px', '-115px', '-150px', '-180px', '-200px'],
+      ml: [0, null, null, '-40px', '-115px', '-150px', '-180px', '-150px'],
       mr: [0, null, null, '-145px', '-160px', '-180px', '-220px', '-290px'],
       mt: [0, null, null, '0px', 0, 0, 0],
       mb: [0, null, null, null, '-80px', '-160px', '-180px', '-115px'],
