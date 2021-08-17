@@ -2,7 +2,7 @@ import fs from 'fs'
 
 //
 
-const fileName = './public/static/privacy.html'
+const fileName = './static/privacy.html'
 
 //
 
