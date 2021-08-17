@@ -2,7 +2,7 @@ import fs from 'fs'
 
 //
 
-const fileName = '/privacy.html'
+const fileName = './public/privacy.html'
 
 
 export default async function api(req, res) {
