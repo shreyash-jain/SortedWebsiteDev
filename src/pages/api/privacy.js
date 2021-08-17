@@ -2,9 +2,8 @@ import fs from 'fs'
 
 //
 
-const fileName = './static/privacy.html'
+const fileName = '/privacy.html'
 
-//
 
 export default async function api(req, res) {
     console.log('Serving static file');
