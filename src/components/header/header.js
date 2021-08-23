@@ -8,9 +8,13 @@ import LogoWhite from 'assets/black-text-logo.png';
 import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
+
 import { useRouter } from 'next/router';
 
 export default function Header({ className }) {
+  const handleClick = (e) => {
+    window.open("https://play.google.com/store/apps/details?id=com.sortit.coach.coachit");
+  };
 
   const router = useRouter();
   console.log(router);
@@ -33,16 +37,16 @@ export default function Header({ className }) {
                 onClick={() => {
                   if (label == 'Careers')
                     router.push(path)
-                  
+
                   if (label == 'Home')
                     router.push('/')
-                  
+
                   if (label == 'Contact Us')
                     router.push('/contact')
                 }}
               >
-                
-                {label == 'Pricing' ?  (router.pathname == '/' ? label : null) : label}
+
+                {label == 'Pricing' ? (router.pathname == '/' ? label : null) : label}
               </Link>
             ))}
           </Flex>
@@ -50,6 +54,7 @@ export default function Header({ className }) {
           <Button
             className="donate__btn"
             variant="darkButton"
+            onClick={handleClick}
             aria-label="Get Started"
           >
             Get Started
