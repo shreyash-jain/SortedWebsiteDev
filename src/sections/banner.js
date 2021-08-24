@@ -39,6 +39,12 @@ export default function Banner() {
     e.preventDefault();
     setVideoOpen(true);
   };
+  const handleStartedClick = (e) => {
+    window.open("https://play.google.com/store/apps/details?id=com.sortit.coach.coachit");
+  };
+  const handleStartedClickSorted = (e) => {
+    window.open("https://play.google.com/store/apps/details?id=com.stay.sorted");
+  };
   return (
     <section sx={styles.banner} id="home">
       <Container sx={styles.banner.container}>
@@ -50,10 +56,15 @@ export default function Banner() {
             Your all-in-one hybrid software for a future-proof fitness business
 
           </Text>
+          <Text as="p" variant="title" style={{ marginBottom: '16px' }}>
+           Get Started
+
+          </Text>
           <Flex>
-            <Button variant="darkButton" aria-label="Get Started">
-              Get Started
+            <Button variant="darkButton" aria-label="Get Started" onClick={handleStartedClick} style={{ marginRight: '8px' }}>
+              For Professionals
             </Button>
+
             <>
               <ModalVideo
                 channel="youtube"
@@ -70,6 +81,9 @@ export default function Banner() {
               </Button>
             </>
           </Flex>
+          <Button variant="darkButton" aria-label="Get Started" onClick={handleStartedClickSorted} style={{ marginTop: '8px' }}>
+            For Fitness Enthusiast
+          </Button>
           {/* <Flex sx={styles.sponsorBox}>
             <Text sx={styles.sponsorTitle}>Sponsored by:</Text>
             <Box sx={styles.sponsorBox.sponsor}>
